@@ -44,6 +44,7 @@ export const setTheme = (themeSetting) => {
   }
 };
 
+// Load listeners for all pages
 export const loadListeners = () => {
   //Load universal elements
   const navbar = document.querySelector('#navbar');

@@ -17,7 +17,7 @@ const launchHome = (page) => {
   //Learn More button scroll
   learnMore.addEventListener('click', () => {
     window.scroll({
-      top: 803,
+      top: 810,
       left: 0,
       behavior: 'smooth',
     });
