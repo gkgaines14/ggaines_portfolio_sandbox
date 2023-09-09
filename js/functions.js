@@ -1,6 +1,8 @@
 //Set global theme for light or dark mode
 export const setTheme = (themeSetting) => {
   const themeButton = document.querySelector('#theme-switch');
+  const themeText = document.querySelector('#theme-text');
+  const orb = document.querySelector('#orb');
 
   if (themeSetting === 'dark') {
     //Set to Dark
@@ -16,7 +18,8 @@ export const setTheme = (themeSetting) => {
     themeButton.style.backgroundColor = '#f8f8f8';
     themeButton.style.color = '#131830';
     themeButton.style.opacity = '0.8';
-    themeButton.innerText = 'LIGHT THEME';
+    themeText.innerText = 'LIGHT THEME';
+    orb.style.transform = 'translateX(0%)';
   } else {
     //Set to Light
     document.documentElement.style.setProperty('--color-text', '#131931');
@@ -40,7 +43,8 @@ export const setTheme = (themeSetting) => {
     themeButton.style.backgroundColor = '#1f2952';
     themeButton.style.color = 'var(--gray-1)';
     themeButton.style.opacity = '1.0';
-    themeButton.innerText = 'DARK THEME';
+    themeText.innerText = 'DARK THEME';
+    orb.style.transform = 'translateX(650%)';
   }
 };
 
