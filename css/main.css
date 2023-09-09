@@ -276,8 +276,46 @@ a {
         #home-special #specials .spec-group .spec-item .label-frame {
           height: 90px;
           margin: 3rem 0 0.5rem; }
-  #home-special a {
-    margin: 3rem; }
+  #home-special #skills {
+    position: relative;
+    background: #1c2446;
+    border: 3px solid var(--color-accent-light);
+    border-radius: 20px;
+    padding: 0.5rem;
+    width: 98%;
+    margin: auto; }
+    #home-special #skills .skills-label {
+      position: absolute;
+      inset: -16% 0 0 13%;
+      font-size: 2rem;
+      background: var(--color-accent-light);
+      border-radius: 20px;
+      color: white;
+      height: 50px;
+      width: 300px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem; }
+    #home-special #skills .skills-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 150px;
+      padding: 2rem; }
+      #home-special #skills .skills-list .skills-item {
+        margin: 0 1rem; }
+  #home-special #portfolio-btn {
+    margin: 3rem auto;
+    min-width: 200px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #home-special #portfolio-btn i {
+      margin-left: 1rem; }
 
 #home-approach {
   border-top: 3px solid var(--color-accent-medium);
@@ -517,6 +555,10 @@ a {
         opacity: 0;
         padding: 1.5rem;
         text-align: left; }
+        #work-portfolio #project-tiles .tile-text .proj-specs {
+          margin-bottom: 1rem; }
+        #work-portfolio #project-tiles .tile-text a {
+          margin-top: 1.2rem; }
       #work-portfolio #project-tiles .tile .explore-btn {
         display: flex;
         align-items: center;
@@ -533,7 +575,7 @@ a {
           padding-top: 0.3rem; }
       #work-portfolio #project-tiles .tile:hover .tile-text {
         opacity: 1;
-        transform: translateY(23%); }
+        transform: translateY(18%); }
       #work-portfolio #project-tiles .tile img {
         width: 400px;
         height: 400px;
