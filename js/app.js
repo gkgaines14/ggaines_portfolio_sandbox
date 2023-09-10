@@ -1,11 +1,13 @@
-import { setTheme, loadListeners } from './functions.js';
+import { setTheme, setOrb, loadListeners } from './functions.js';
 
 //Home Script
 const launchHome = (page) => {
   window.onload = () => {
     if (!localStorage.getItem('theme')) {
       localStorage.setItem('theme', 'dark');
+      localStorage.setItem('toggle', 'left');
     }
+    setOrb(localStorage.getItem('toggle'));
     setTheme(localStorage.getItem('theme'));
     loadListeners();
     console.log('Home page loaded');
@@ -29,10 +31,12 @@ const launchAbout = (page) => {
   window.onload = () => {
     if (!localStorage.getItem('theme')) {
       localStorage.setItem('theme', 'dark');
+      localStorage.setItem('toggle', 'left');
     }
+    setOrb(localStorage.getItem('toggle'));
     setTheme(localStorage.getItem('theme'));
     loadListeners();
-    console.log('About page loaded');
+    console.log('Home page loaded');
   };
 
   const header = document.querySelector('#header');

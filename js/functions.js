@@ -1,5 +1,5 @@
 //Set global theme for light or dark mode
-export const setTheme = (themeSetting) => {
+export const setTheme = (themeSetting, orbPosition) => {
   const themeButton = document.querySelector('#theme-switch');
   const themeText = document.querySelector('#theme-text');
   const orb = document.querySelector('#orb');
@@ -9,17 +9,14 @@ export const setTheme = (themeSetting) => {
     document.documentElement.style.setProperty('--color-text', 'white');
     document.documentElement.style.setProperty('--color-background', '#131931');
     document.documentElement.style.setProperty('--tab-color', '#191d2d');
-    // document.documentElement.style.setProperty('--form-shadow', '#131830');
     document.querySelector('.logo-back').style.backgroundColor = '#131830';
     document.querySelector('.logo-back').style.boxShadow =
       '0 0 8px 1px var(--color-accent-medium)';
-    // document.querySelector('#cont-form').style.boxShadow =
-    //   '0 0 8px 1px var(--color-background)';
+
     themeButton.style.backgroundColor = '#f8f8f8';
     themeButton.style.color = '#131830';
     themeButton.style.opacity = '0.8';
     themeText.innerText = 'LIGHT THEME';
-    orb.style.transform = 'translateX(0%)';
   } else {
     //Set to Light
     document.documentElement.style.setProperty('--color-text', '#131931');
@@ -28,23 +25,42 @@ export const setTheme = (themeSetting) => {
       'var(--gray-0)'
     );
     document.documentElement.style.setProperty('--tab-color', '#1f2952');
-
-    // document.documentElement.style.setProperty(
-    //   '--form-shadow',
-    //   'rgba(178, 177, 177, 0.638)'
-    // );
-
     document.querySelector('.logo-back').style.backgroundColor =
       'var(--color-accent-light)';
     document.querySelector('.logo-back').style.boxShadow =
       '0 0 8px 1px var(--gray-5)';
-    // document.querySelector('#cont-form').style.boxShadow =
-    //   '0 2px 12px 4px rgba(178, 177, 177, 0.638)';
+
     themeButton.style.backgroundColor = '#1f2952';
     themeButton.style.color = 'var(--gray-1)';
     themeButton.style.opacity = '1.0';
     themeText.innerText = 'DARK THEME';
+  }
+};
+
+// Setting orb position on-load
+export const setOrb = (orbPosition) => {
+  console.log(orbPosition);
+  if (orbPosition === 'left') {
+    orb.style.transform = '';
+    orb.style.right = '';
+  } else {
+    orb.style.transform = '';
+    orb.style.right = '0';
+  }
+};
+
+export const toggleOrb = (orbPosition) => {
+  if (orbPosition === 'left') {
+    // localStorage.setItem('toggle', 'right');
     orb.style.transform = 'translateX(650%)';
+    orb.style.right = '';
+    localStorage.setItem('toggle', 'right');
+  } else {
+    // localStorage.setItem('toggle', 'left');
+    orb.style.transform = 'translateX(0%)';
+    orb.style.right = '';
+    // setTimeout(() => (orb.style.right = ''), 2000);
+    localStorage.setItem('toggle', 'left');
   }
 };
 
@@ -61,15 +77,22 @@ export const loadListeners = () => {
   const b2 = document.querySelector('#b2');
   const b3 = document.querySelector('#b3');
   const header = document.querySelector('#header');
+  // const themeButton = document.querySelector('#theme-switch');
+  // const themeText = document.querySelector('#theme-text');
+  // const orb = document.querySelector('#orb');
 
   //Theme Switch Button
   document.querySelector('#theme-switch').onclick = () => {
     if (localStorage.getItem('theme') === 'dark') {
       localStorage.setItem('theme', 'light');
+      // localStorage.setItem('toggle', 'right');
     } else {
       localStorage.setItem('theme', 'dark');
+      // localStorage.setItem('toggle', 'left');
     }
-    setTheme(localStorage.getItem('theme'));
+
+    toggleOrb(localStorage.getItem('toggle'));
+    setTheme(localStorage.getItem('theme'), localStorage.getItem('toggle'));
   };
 
   //Bottom border for fixed header

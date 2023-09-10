@@ -290,36 +290,102 @@ a {
           height: 90px;
           margin: 3rem 0 0.5rem; }
   #home-special #skills {
-    position: relative;
     background: #1c2446;
     border: 3px solid var(--color-accent-medium);
     border-radius: 20px;
     padding: 0.5rem;
     width: 98%;
     margin: auto; }
-    #home-special #skills .skills-label {
-      position: absolute;
-      inset: -16% 0 0 13%;
-      font-size: 2rem;
-      background: var(--color-accent-medium);
-      border-radius: 20px;
-      color: white;
-      height: 50px;
-      width: 300px;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem; }
     #home-special #skills .skills-list {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-evenly;
       flex-wrap: wrap;
-      height: 150px;
-      padding: 2rem; }
-      #home-special #skills .skills-list .skills-item {
-        margin: 0 1rem; }
+      padding: 2rem 0.5rem; }
+      #home-special #skills .skills-list .skills-group {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 95%; }
+        #home-special #skills .skills-list .skills-group .skills-label {
+          position: absolute;
+          top: -4.3rem;
+          font-size: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+          width: 100%; }
+          #home-special #skills .skills-list .skills-group .skills-label p {
+            background: var(--color-accent-medium);
+            border-radius: 20px;
+            color: white;
+            height: 50px;
+            width: 300px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+        #home-special #skills .skills-list .skills-group .skill-item {
+          margin: 0.5rem 1rem;
+          display: flex;
+          align-items: center; }
+          #home-special #skills .skills-list .skills-group .skill-item .skill-icon {
+            background: var(--gray-0);
+            border-radius: 25px 0 0 25px;
+            height: 35px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 0 0 4px; }
+            #home-special #skills .skills-list .skills-group .skill-item .skill-icon #mongo {
+              transform: rotate(40deg); }
+            #home-special #skills .skills-list .skills-group .skill-item .skill-icon #ps {
+              border-radius: 15%;
+              background-color: #131830;
+              color: var(--gray-0);
+              width: 22px;
+              height: 22px;
+              font-style: normal; }
+            #home-special #skills .skills-list .skills-group .skill-item .skill-icon #sql {
+              border-radius: 15%;
+              background-color: #131830;
+              color: var(--gray-0);
+              width: 25px;
+              height: 25px;
+              font-style: normal;
+              font-family: 'Roboto', sans-serif;
+              font-size: 0.7rem;
+              transform: skew(-15deg);
+              padding: 0.6rem; }
+            #home-special #skills .skills-list .skills-group .skill-item .skill-icon #jqu-box {
+              background-color: #131830;
+              color: var(--gray-0);
+              width: 20px;
+              height: 20px;
+              overflow: hidden;
+              position: relative; }
+              #home-special #skills .skills-list .skills-group .skill-item .skill-icon #jqu-box #jqu {
+                color: var(--gray-0);
+                transform: rotate(210deg);
+                position: absolute;
+                top: 5px;
+                left: 2px; }
+            #home-special #skills .skills-list .skills-group .skill-item .skill-icon i {
+              color: #131830; }
+          #home-special #skills .skills-list .skills-group .skill-item .skill-name {
+            color: #131830;
+            background: var(--gray-0);
+            border-radius: 0 25px 25px 0;
+            height: 35px;
+            width: 150px;
+            margin-left: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem; }
   #home-special #portfolio-btn {
     margin: 3rem auto;
     min-width: 200px;
@@ -859,6 +925,16 @@ a {
         text-align: center; }
     #home-landing #landing-content #headshot-card {
       display: none; }
+  #home-special #skills .skills-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0.5rem; }
+    #home-special #skills .skills-list .skills-group {
+      justify-content: center; }
+      #home-special #skills .skills-list .skills-group .skill-item .skill-name {
+        width: 300px; }
   #about-bio #bio-card {
     display: flex;
     flex-direction: column;
