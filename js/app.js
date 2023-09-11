@@ -48,10 +48,12 @@ const launchWork = (page) => {
   window.onload = () => {
     if (!localStorage.getItem('theme')) {
       localStorage.setItem('theme', 'dark');
+      localStorage.setItem('toggle', 'left');
     }
+    setOrb(localStorage.getItem('toggle'));
     setTheme(localStorage.getItem('theme'));
     loadListeners();
-    console.log('Work page loaded');
+    console.log('Home page loaded');
   };
 
   const allTab = document.querySelector('#p-all');
@@ -138,10 +140,12 @@ const launchContact = (page) => {
   window.onload = () => {
     if (!localStorage.getItem('theme')) {
       localStorage.setItem('theme', 'dark');
+      localStorage.setItem('toggle', 'left');
     }
+    setOrb(localStorage.getItem('toggle'));
     setTheme(localStorage.getItem('theme'));
     loadListeners();
-    console.log('About page loaded');
+    console.log('Home page loaded');
   };
 
   const header = document.querySelector('#header');
