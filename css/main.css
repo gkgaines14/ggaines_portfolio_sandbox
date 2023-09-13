@@ -61,7 +61,8 @@
   background: #2a7a4a;
   color: white; }
   .btn-light:hover {
-    background: #28af60; }
+    background: #28af60;
+    box-shadow: 0 0 10px 1px rgba(27, 59, 27, 0.906); }
 
 .invisible {
   display: none; }
@@ -202,7 +203,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%; }
+    width: 50%;
+    padding-left: 1rem; }
     #home-landing #landing-content #intro-message .label-box {
       color: var(--color-text); }
     #home-landing #landing-content #intro-message .my-name {
@@ -427,21 +429,23 @@ a {
 #about-experience {
   background: var(--color-primary2);
   color: #f8f8f8;
-  height: 1000px;
+  height: 1100px;
   width: 100%;
   border-top: 3px solid var(--color-accent-medium);
   text-align: center; }
+  #about-experience #exp-text {
+    margin-bottom: 2rem; }
   #about-experience #timeline {
     display: flex;
     align-items: center;
-    height: 650px;
+    height: 800px;
     width: 100%;
     position: relative;
     margin-top: 3rem; }
     #about-experience #timeline #grid-card {
       display: grid;
-      grid-template-rows: 280px 100px 280px;
-      grid-template-columns: repeat(5, 240px);
+      grid-template-rows: 360px 80px 360px;
+      grid-template-columns: repeat(5, 230px);
       grid-template-areas: 't1 t1 t3 t4 t5' 'd1 d2 d3 d4 d5' 'b1 b2 b3 b4 b5';
       align-items: center;
       justify-content: flex-end;
@@ -498,8 +502,8 @@ a {
         justify-content: end;
         text-align: left; }
       #about-experience #timeline #grid-card .exp-item {
-        height: 300px;
-        width: 340px;
+        height: 360px;
+        width: 370px;
         padding-left: 1rem;
         overflow: hidden;
         font-size: 13pt; }
