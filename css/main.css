@@ -1180,7 +1180,7 @@ a {
   #home-landing #landing-content #intro-message .upper-message {
     display: flex;
     flex-direction: column;
-    background: url('./img/GregHeadshot_right_v3 copy.jpg') no-repeat;
+    background: url('/img/GregHeadshot_right_v3\ copy.jpg') no-repeat;
     background-position: top -95px right 0px;
     background-size: 100%;
     height: 400px;
