@@ -47,6 +47,10 @@
   font-weight: 700;
   padding: 0.5rem; }
 
+.heavy {
+  font-weight: 800;
+  font-size: 1.4rem; }
+
 .btn-light {
   width: 160px;
   height: 50px;
@@ -196,7 +200,7 @@ a {
 #home-landing #landing-content {
   display: flex;
   justify-content: space-between;
-  min-height: 800px;
+  height: 800px;
   width: 100%;
   overflow: hidden; }
   #home-landing #landing-content #intro-message {
@@ -214,7 +218,8 @@ a {
       font-family: 'Roboto', sans-serif; }
     #home-landing #landing-content #intro-message p {
       margin-bottom: 4rem;
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      word-spacing: 4px; }
   #home-landing #landing-content #headshot-card {
     width: 50%;
     display: flex;
@@ -266,7 +271,7 @@ a {
       flex-wrap: wrap; }
       #home-special #specials .spec-group .spec-item {
         width: 300px;
-        height: 475px;
+        max-height: 500px;
         background: #1c2446;
         border: solid 3px var(--color-accent-medium);
         border-radius: 10px;
@@ -276,8 +281,6 @@ a {
         display: flex;
         flex-direction: column;
         font-size: 14pt; }
-        #home-special #specials .spec-group .spec-item .spec-desc {
-          height: 205px; }
         #home-special #specials .spec-group .spec-item .icon-frame {
           position: absolute;
           top: -17%;
@@ -842,7 +845,7 @@ a {
     background: var(--color-background);
     position: sticky;
     top: 0;
-    height: 110px;
+    height: 95px;
     width: 100%;
     z-index: 40;
     margin: 0; }
@@ -850,12 +853,12 @@ a {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem; }
+      padding: 1rem 1rem 0.5rem; }
       #header .head-container .logo-back {
         background-color: #131830;
         border-radius: 50%;
-        width: 85px;
-        height: 75px;
+        width: 65px;
+        height: 60px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -867,10 +870,11 @@ a {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding: 0.6rem;
+        padding-top: 0.2rem;
+        margin-top: 2px;
         z-index: 99;
         width: 50px;
-        height: 50px;
+        height: 30px;
         position: relative;
         overflow: hidden; }
         #header .head-container .right-header #nav-btn #b1,
@@ -922,20 +926,50 @@ a {
             border-bottom: 3px var(--color-primary2) solid; }
   #home-landing #landing-content {
     flex-direction: column;
-    justify-content: space-evenly; }
+    height: 850px; }
     #home-landing #landing-content #intro-message {
       width: auto;
-      padding: 1rem;
+      padding: 0;
       align-items: center;
-      text-align: center; }
-      #home-landing #landing-content #intro-message .label-box {
-        text-align: center; }
-      #home-landing #landing-content #intro-message .my-name {
-        text-align: center; }
+      text-align: center;
+      height: 800px;
+      justify-content: space-between; }
+      #home-landing #landing-content #intro-message .upper-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(var(--color-background) 0%, var(--color-accent-medium) 28%, var(--color-accent-medium) 38%, var(--color-background) 82%);
+        height: 280px;
+        padding-top: 3rem; }
+        #home-landing #landing-content #intro-message .upper-message .label-box {
+          color: #f8f8f8;
+          font-size: 1.7rem;
+          text-align: center;
+          padding: 0 1rem; }
+        #home-landing #landing-content #intro-message .upper-message .my-name {
+          font-size: 2.7rem;
+          text-align: left; }
+      #home-landing #landing-content #intro-message p {
+        font-size: 1.3rem;
+        word-spacing: 0.4rem;
+        text-align: left;
+        text-align: center;
+        padding: 0 2rem;
+        width: 100%; }
     #home-landing #landing-content #headshot-card {
       display: none; }
   #home-special {
     padding: 1rem; }
+    #home-special #specials .spec-group .spec-item {
+      padding: 1.1rem 1.1rem 1.5rem; }
+      #home-special #specials .spec-group .spec-item .icon-frame {
+        width: 100px;
+        height: 100px;
+        top: -55px;
+        left: 100px; }
+      #home-special #specials .spec-group .spec-item .label-frame {
+        margin: 2rem 0 0.5rem; }
     #home-special #skills .skills-list {
       display: flex;
       align-items: center;
