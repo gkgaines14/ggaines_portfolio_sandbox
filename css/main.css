@@ -1176,7 +1176,6 @@ a {
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    background: url('/img/greg_smile.png');
   }
   #home-landing #landing-content #intro-message .upper-message {
     display: flex;
