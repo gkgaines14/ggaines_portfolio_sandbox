@@ -14,16 +14,16 @@ const launchHome = (page) => {
   };
 
   const header = document.querySelector('#header');
-  const learnMore = document.querySelector('#learn-more');
+  // const learnMore = document.querySelector('#learn-more');
 
   //Learn More button scroll
-  learnMore.addEventListener('click', () => {
-    window.scroll({
-      top: 810,
-      left: 0,
-      behavior: 'smooth',
-    });
-  });
+  // learnMore.addEventListener('click', () => {
+  //   window.scroll({
+  //     top: 810,
+  //     left: 0,
+  //     behavior: 'smooth',
+  //   });
+  // });
 };
 
 //About Script
